@@ -674,6 +674,75 @@ body, button {
 }
 
 
+
+/* Alt button styles. */
+#altGenerateButton {
+    background: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    padding: 15px 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    position: relative;
+    right: -20px;
+    transition: 0.5s ease;
+}
+#altGenerateButton:disabled {
+    color: rgba(255, 255, 255, 0.75);
+    pointer-events: none;
+}
+#altGenerateButton[loading] {
+    color: #fff;
+}
+#altGenerateButton:hover,
+#altGenerateButton:focus {
+    text-shadow: 0px 0px 20px #fff;
+    outline: none;
+}
+#altGenerateButton:active {
+    color: #c7c7c7;
+    text-shadow:  0px 0px 20px #c7c7c7;
+}
+#loginSVG {
+    -webkit-transform: translate3d(0, 0, 0);
+    overflow: visible;
+    transform: rotate(90deg);
+    margin-left: 20px;
+    transition: 0.25s ease;
+    width: 20px;
+    height: 20px;
+}
+#altGenerateButton:hover #loginSVG,
+#altGenerateButton:focus #loginSVG {
+    -webkit-filter: drop-shadow(0px 0px 2px #fff);
+}
+#altGenerateButton:active #loginSVG .arrowLine {
+    stroke: #c7c7c7;
+}
+#altGenerateButton:active #loginSVG {
+    -webkit-filter: drop-shadow(0px 0px 2px #c7c7c7);
+}
+#altGenerateButton:disabled #loginSVG .arrowLine {
+    stroke: rgba(255, 255, 255, 0.75);
+}
+
+#altGenerateButtonContent {
+    display: flex;
+    align-items: center;
+}
+
+#altGenerateButton .circle-loader,
+#altGenerateButton[loading] #loginSVG {
+    display: none;
+}
+#altGenerateButton[loading] .circle-loader,
+#altGenerateButton #loginSVG {
+    display: initial;
+}
+
+
+
 .circle-loader {
     margin-left: 20px;
     border: 2px solid rgba(255, 255, 255, 0.5);

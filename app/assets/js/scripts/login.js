@@ -16,6 +16,7 @@ const loginPassword         = document.getElementById('loginPassword')
 const checkmarkContainer    = document.getElementById('checkmarkContainer')
 const loginRememberOption   = document.getElementById('loginRememberOption')
 const loginButton           = document.getElementById('loginButton')
+const altGenerateButton     = document.getElementById('altGenerateButton')
 const loginForm             = document.getElementById('loginForm')
 
 // Control variables.
@@ -130,9 +131,13 @@ function loginLoading(v){
     if(v){
         loginButton.setAttribute('loading', v)
         loginButton.innerHTML = loginButton.innerHTML.replace(Lang.queryJS('login.login'), Lang.queryJS('login.loggingIn'))
+        altGenerateButton.setAttribute('loading', v)
+        altGenerateButton.innerHTML = altGenerateButton.innerHTML.replace(Lang.queryJS('login.login'), Lang.queryJS('login.loggingIn'))
     } else {
         loginButton.removeAttribute('loading')
         loginButton.innerHTML = loginButton.innerHTML.replace(Lang.queryJS('login.loggingIn'), Lang.queryJS('login.login'))
+        altGenerateButton.removeAttribute('loading')
+        altGenerateButton.innerHTML = altGenerateButton.innerHTML.replace(Lang.queryJS('login.loggingIn'), Lang.queryJS('login.login'))
     }
 }
 
@@ -297,4 +302,14 @@ loginButton.addEventListener('click', () => {
         loggerLogin.log('Error while logging in.', err)
     })
 
+})
+
+altGenerateButton.addEventListener('click', () => {
+    // Disable form.
+    formDisabled(true)
+
+    // Show loading stuff.
+    loginLoading(true)
+    
+    console.log("test")
 })
