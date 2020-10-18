@@ -20,7 +20,7 @@ class ProcessBuilder {
         this.commonDir = ConfigManager.getCommonDirectory()
         this.server = distroServer
         this.versionData = versionData
-        this.forgeData = forgeData
+        // this.forgeData = forgeData
         this.authUser = authUser
         this.launcherVersion = launcherVersion
         this.forgeModListFile = path.join(this.gameDir, 'forgeMods.list') // 1.13+
@@ -54,10 +54,10 @@ class ProcessBuilder {
         const uberModArr = modObj.fMods.concat(modObj.lMods)
         let args = this.constructJVMArguments(uberModArr, tempNativePath)
 
-        if(Util.mcVersionAtLeast('1.13', this.server.getMinecraftVersion())){
+        // if(Util.mcVersionAtLeast('1.13', this.server.getMinecraftVersion())){
             //args = args.concat(this.constructModArguments(modObj.fMods))
-            args = args.concat(this.constructModList(modObj.fMods))
-        }
+            // args = args.concat(this.constructModList(modObj.fMods))
+        // }
 
         logger.log('Launch Arguments:', args)
 
@@ -352,10 +352,10 @@ class ProcessBuilder {
         args.push('-Djava.library.path=' + tempNativePath)
 
         // Main Java Class
-        args.push(this.forgeData.mainClass)
+        args.push(this.versionData.mainClass)
 
         // Forge Arguments
-        args = args.concat(this._resolveForgeArgs())
+        // args = args.concat(this._resolveForgeArgs())
 
         return args
     }
@@ -389,7 +389,8 @@ class ProcessBuilder {
         args = args.concat(ConfigManager.getJVMOptions())
 
         // Main Java Class
-        args.push(this.forgeData.mainClass)
+        console.log(this.versionData.mainClass);
+        args.push(this.versionData.mainClass)
 
         // Vanilla Arguments
         args = args.concat(this.versionData.arguments.game)
@@ -497,33 +498,35 @@ class ProcessBuilder {
                     }
                 }
             }
-        }
+        }        // args = args.filter(arg => {
+        //     return arg != null
+        // })
 
-        // Autoconnect
-        let isAutoconnectBroken
-        try {
-            isAutoconnectBroken = Util.isAutoconnectBroken(this.forgeData.id.split('-')[2])
-        } catch(err) {
-            logger.error(err)
-            logger.error('Forge version format changed.. assuming autoconnect works.')
-            logger.debug('Forge version:', this.forgeData.id)
-        }
+        // // Autoconnect
+        // let isAutoconnectBroken
+        // try {
+        //     isAutoconnectBroken = Util.isAutoconnectBroken(this.forgeData.id.split('-')[2])
+        // } catch(err) {
+        //     logger.error(err)
+        //     logger.error('Forge version format changed.. assuming autoconnect works.')
+        //     logger.debug('Forge version:', this.forgeData.id)
+        // }
 
-        if(isAutoconnectBroken) {
-            logger.error('Server autoconnect disabled on Forge 1.15.2 for builds earlier than 31.2.15 due to OpenGL Stack Overflow issue.')
-            logger.error('Please upgrade your Forge version to at least 31.2.15!')
-        } else {
-            this._processAutoConnectArg(args)
-        }
+        // if(isAutoconnectBroken) {
+        //     logger.error('Server autoconnect disabled on Forge 1.15.2 for builds earlier than 31.2.15 due to OpenGL Stack Overflow issue.')
+        //     logger.error('Please upgrade your Forge version to at least 31.2.15!')
+        // } else {
+        //     this._processAutoConnectArg(args)
+        // }
         
 
         // Forge Specific Arguments
-        args = args.concat(this.forgeData.arguments.game)
+        // args = args.concat(this.forgeData.arguments.game)
 
         // Filter null values
-        args = args.filter(arg => {
-            return arg != null
-        })
+        // args = args.filter(arg => {
+        //     return arg != null
+        // })
 
         return args
     }
