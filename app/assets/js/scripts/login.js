@@ -310,6 +310,39 @@ altGenerateButton.addEventListener('click', () => {
 
     // Show loading stuff.
     loginLoading(true)
-    
-    console.log("test")
+
+    AuthManager.addAltAccount(loginUsername.value, loginPassword.value).then((value) => {
+        updateSelectedAccount(value)
+        loginButton.innerHTML = loginButton.innerHTML.replace(Lang.queryJS('login.loggingIn'), Lang.queryJS('login.success'))
+        $('.circle-loader').toggleClass('load-complete')
+        $('.checkmark').toggle()
+        setTimeout(() => {
+            switchView(VIEWS.login, loginViewOnSuccess, 500, 500, () => {
+                // Temporary workaround
+                if(loginViewOnSuccess === VIEWS.settings){
+                    prepareSettings()
+                }
+                loginViewOnSuccess = VIEWS.landing // Reset this for good measure.
+                loginCancelEnabled(false) // Reset this for good measure.
+                loginViewCancelHandler = null // Reset this for good measure.
+                loginUsername.value = ''
+                loginPassword.value = ''
+                $('.circle-loader').toggleClass('load-complete')
+                $('.checkmark').toggle()
+                loginLoading(false)
+                loginButton.innerHTML = loginButton.innerHTML.replace(Lang.queryJS('login.success'), Lang.queryJS('login.login'))
+                formDisabled(false)
+            })
+        }, 1000)
+    }).catch((err) => {
+        loginLoading(false)
+        const errF = resolveError(err)
+        setOverlayContent(errF.title, errF.desc, Lang.queryJS('login.tryAgain'))
+        setOverlayHandler(() => {
+            formDisabled(false)
+            toggleOverlay(false)
+        })
+        toggleOverlay(true)
+        loggerLogin.log('Error while logging in.', err)
+    })
 })

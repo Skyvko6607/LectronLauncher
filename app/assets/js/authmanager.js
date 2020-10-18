@@ -12,6 +12,7 @@
 const ConfigManager = require('./configmanager')
 const LoggerUtil    = require('./loggerutil')
 const Mojang        = require('./mojang')
+const Lectron       = require('./lectron')
 const logger        = LoggerUtil('%c[AuthManager]', 'color: #a02d2a; font-weight: bold')
 const loggerSuccess = LoggerUtil('%c[AuthManager]', 'color: #209b07; font-weight: bold')
 
@@ -29,6 +30,25 @@ const loggerSuccess = LoggerUtil('%c[AuthManager]', 'color: #209b07; font-weight
 exports.addAccount = async function(username, password){
     try {
         const session = await Mojang.authenticate(username, password, ConfigManager.getClientToken())
+        if(session.selectedProfile != null){
+            const ret = ConfigManager.addAuthAccount(session.selectedProfile.id, session.accessToken, username, session.selectedProfile.name)
+            if(ConfigManager.getClientToken() == null){
+                ConfigManager.setClientToken(session.clientToken)
+            }
+            ConfigManager.save()
+            return ret
+        } else {
+            throw new Error('NotPaidAccount')
+        }
+        
+    } catch (err){
+        return Promise.reject(err)
+    }
+}
+
+exports.addAltAccount = async function(username, password){
+    try {
+        const session = await Lectron.authenticate(username, password, ConfigManager.getClientToken())
         if(session.selectedProfile != null){
             const ret = ConfigManager.addAuthAccount(session.selectedProfile.id, session.accessToken, username, session.selectedProfile.name)
             if(ConfigManager.getClientToken() == null){
