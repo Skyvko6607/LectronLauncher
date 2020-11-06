@@ -1,0 +1,372 @@
+{
+    "version": "1.0.0",
+    "rss": "https://avalonconcordia.com/category/news/feed/",
+    "discord": {
+      "clientId": "745009977713885279",
+      "smallImageText": "Lectron",
+      "smallImageKey": "ServerIcon"
+    },
+    "servers": [
+      {
+        "id": "Lectron-1.16.2",
+        "name": "Lectron (Minecraft 1.16.2)",
+        "description": "Lectron Running Minecraft 1.16.2",
+        "icon": "https://storage.googleapis.com/lectron-launcher/servers/AvalonConcordia-1.16.2/AvalonConcordia-1.16.2.png",
+        "version": "1.0.0",
+        "address": "mc.lectron.com",
+        "minecraftVersion": "1.16.2",
+        "discord": {
+          "shortId": "Lectron",
+          "largeImageText": "Lectron Minecraft Server",
+          "largeImageKey": "ServerIcon"
+        },
+        "mainServer": true,
+        "autoconnect": false,
+        "modules": [
+          {
+            "id": "net.minecraftforge:forge:1.16.2-33.0.22",
+            "name": "Minecraft Forge (base jar)",
+            "type": "ForgeHosted",
+            "artifact": {
+              "size": 195407,
+              "MD5": "a745f717830de5a24f932eb31c315648",
+              "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraftforge/forge/1.16.2-33.0.22/forge-1.16.2-33.0.22.jar"
+            },
+            "subModules": [
+              {
+                "id": "1.16.2-33.0.22",
+                "name": "Minecraft Forge (version.json)",
+                "type": "VersionManifest",
+                "artifact": {
+                  "size": 11923,
+                  "MD5": "1ba0bc12584c3d6d4d34f2971742e63d",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/versions/1.16.2-forge-33.0.22/1.16.2-forge-33.0.22.json"
+                }
+              },
+              {
+                "id": "net.minecraftforge:forge:1.16.2-33.0.22:universal",
+                "name": "Minecraft Forge (universal jar)",
+                "type": "Library",
+                "artifact": {
+                  "size": 2191030,
+                  "MD5": "6d090d7ef246931458c71e74ec307461",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraftforge/forge/1.16.2-33.0.22/forge-1.16.2-33.0.22-universal.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraftforge:forge:1.16.2-33.0.22:client",
+                "name": "Minecraft Forge (client jar)",
+                "type": "Library",
+                "artifact": {
+                  "size": 3887641,
+                  "MD5": "0e383396451b07d8f1f73d91d581bab0",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraftforge/forge/1.16.2-33.0.22/forge-1.16.2-33.0.22-client.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraft:client:1.16.2-20200812.004259:srg",
+                "name": "Minecraft Forge (client srg)",
+                "type": "Library",
+                "artifact": {
+                  "size": 11307297,
+                  "MD5": "6152c96ef1cdbad0d366d704aa05cd12",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraft/client/1.16.2-20200812.004259/client-1.16.2-20200812.004259-srg.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraft:client:1.16.2-20200812.004259:slim",
+                "name": "Minecraft Forge (client slim)",
+                "type": "Library",
+                "artifact": {
+                  "size": 9081916,
+                  "MD5": "0856921722abdeb3235f0bba089b280a",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraft/client/1.16.2-20200812.004259/client-1.16.2-20200812.004259-slim.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraft:client:1.16.2-20200812.004259:extra",
+                "name": "Minecraft Forge (client extra)",
+                "type": "Library",
+                "artifact": {
+                  "size": 8423545,
+                  "MD5": "69ad0bf55773ccfb94f4d4ef8be516d3",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraft/client/1.16.2-20200812.004259/client-1.16.2-20200812.004259-extra.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "org.ow2.asm:asm:7.2",
+                "name": "Minecraft Forge (asm)",
+                "type": "Library",
+                "artifact": {
+                  "size": 114873,
+                  "MD5": "26cf10dfd4729fd22fcae0694e041167",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/ow2/asm/asm/7.2/asm-7.2.jar"
+                }
+              },
+              {
+                "id": "org.ow2.asm:asm-commons:7.2",
+                "name": "Minecraft Forge (asm-commons)",
+                "type": "Library",
+                "artifact": {
+                  "size": 70051,
+                  "MD5": "321121317a6c6221cc26e8f9ee97022f",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/ow2/asm/asm-commons/7.2/asm-commons-7.2.jar"
+                }
+              },
+              {
+                "id": "org.ow2.asm:asm-tree:7.2",
+                "name": "Minecraft Forge (asm-tree)",
+                "type": "Library",
+                "artifact": {
+                  "size": 50283,
+                  "MD5": "c7214695c379f25861500e576a1f8cea",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/ow2/asm/asm-tree/7.2/asm-tree-7.2.jar"
+                }
+              },
+              {
+                "id": "org.ow2.asm:asm-util:7.2",
+                "name": "Minecraft Forge (asm-util)",
+                "type": "Library",
+                "artifact": {
+                  "size": 80707,
+                  "MD5": "0891d2562ab1db2a1d5fc013af9b40c5",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/ow2/asm/asm-util/7.2/asm-util-7.2.jar"
+                }
+              },
+              {
+                "id": "org.ow2.asm:asm-analysis:7.2",
+                "name": "Minecraft Forge (asm-analysis)",
+                "type": "Library",
+                "artifact": {
+                  "size": 33444,
+                  "MD5": "e0aa4ec0cfa837415818aac762ed5dc2",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/ow2/asm/asm-analysis/7.2/asm-analysis-7.2.jar"
+                }
+              },
+              {
+                "id": "cpw.mods:modlauncher:6.1.1",
+                "name": "Minecraft Forge (modlauncher)",
+                "type": "Library",
+                "artifact": {
+                  "size": 117621,
+                  "MD5": "3c748fe1e7ee443c411c69659e55a91f",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/cpw/mods/modlauncher/6.1.1/modlauncher-6.1.1.jar"
+                }
+              },
+              {
+                "id": "cpw.mods:grossjava9hacks:1.3.0",
+                "name": "Minecraft Forge (grossjava9hacks)",
+                "type": "Library",
+                "artifact": {
+                  "size": 1921,
+                  "MD5": "c5c05d52fcef5479e0ea069f30c6ceb5",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/cpw/mods/grossjava9hacks/1.3.0/grossjava9hacks-1.3.0.jar"
+                }
+              },
+              {
+                "id": "net.minecraftforge:accesstransformers:2.2.0-shadowed",
+                "name": "Minecraft Forge (accesstransformers)",
+                "type": "Library",
+                "artifact": {
+                  "size": 445030,
+                  "MD5": "6ee328e0eda1765b17fb842135d3194b",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraftforge/accesstransformers/2.2.0/accesstransformers-2.2.0-shadowed.jar"
+                }
+              },
+              {
+                "id": "net.minecraftforge:eventbus:3.0.3-service",
+                "name": "Minecraft Forge (eventbus)",
+                "type": "Library",
+                "artifact": {
+                  "size": 40980,
+                  "MD5": "a201c36f99ddcce0196903d8ee0e10cc",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraftforge/eventbus/3.0.3/eventbus-3.0.3-service.jar"
+                }
+              },
+              {
+                "id": "net.minecraftforge:forgespi:3.1.1",
+                "name": "Minecraft Forge (forgespi)",
+                "type": "Library",
+                "artifact": {
+                  "size": 19937,
+                  "MD5": "e1f1975f008722e258e99fc594c8fd33",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraftforge/forgespi/3.1.1/forgespi-3.1.1.jar"
+                }
+              },
+              {
+                "id": "net.minecraftforge:coremods:3.0.0",
+                "name": "Minecraft Forge (coremods)",
+                "type": "Library",
+                "artifact": {
+                  "size": 21803,
+                  "MD5": "9b0b4d1d8b5815d3f693ac82d4128f13",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraftforge/coremods/3.0.0/coremods-3.0.0.jar"
+                }
+              },
+              {
+                "id": "net.minecraftforge:unsafe:0.2.0",
+                "name": "Minecraft Forge (unsafe)",
+                "type": "Library",
+                "artifact": {
+                  "size": 2834,
+                  "MD5": "2d1016ebe4c1a63dd50a59d26bd12db1",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecraftforge/unsafe/0.2.0/unsafe-0.2.0.jar"
+                }
+              },
+              {
+                "id": "com.electronwill.night-config:core:3.6.2",
+                "name": "Minecraft Forge (core)",
+                "type": "Library",
+                "artifact": {
+                  "size": 199091,
+                  "MD5": "243fc0b7f1e509aaca3550c14d8f60af",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/com/electronwill/night-config/core/3.6.2/core-3.6.2.jar"
+                }
+              },
+              {
+                "id": "com.electronwill.night-config:toml:3.6.2",
+                "name": "Minecraft Forge (toml)",
+                "type": "Library",
+                "artifact": {
+                  "size": 31152,
+                  "MD5": "7b2339065e252b1c187d39351d84a09f",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/com/electronwill/night-config/toml/3.6.2/toml-3.6.2.jar"
+                }
+              },
+              {
+                "id": "org.jline:jline:3.12.1",
+                "name": "Minecraft Forge (jline)",
+                "type": "Library",
+                "artifact": {
+                  "size": 732926,
+                  "MD5": "ffd8c9d6eb8a8456ef505c8ef9fc777d",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/jline/jline/3.12.1/jline-3.12.1.jar"
+                }
+              },
+              {
+                "id": "org.apache.maven:maven-artifact:3.6.0",
+                "name": "Minecraft Forge (maven-artifact)",
+                "type": "Library",
+                "artifact": {
+                  "size": 55051,
+                  "MD5": "89e95013b11f347e48c0525965600404",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/apache/maven/maven-artifact/3.6.0/maven-artifact-3.6.0.jar"
+                }
+              },
+              {
+                "id": "net.jodah:typetools:0.8.1",
+                "name": "Minecraft Forge (typetools)",
+                "type": "Library",
+                "artifact": {
+                  "size": 15367,
+                  "MD5": "0eb481e955b455e61bd5ea8f520f6009",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/jodah/typetools/0.8.1/typetools-0.8.1.jar"
+                }
+              },
+              {
+                "id": "org.apache.logging.log4j:log4j-api:2.11.2",
+                "name": "Minecraft Forge (log4j-api)",
+                "type": "Library",
+                "artifact": {
+                  "size": 266283,
+                  "MD5": "3f7ee51e3dd0830de799dae0b90243dd",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar"
+                }
+              },
+              {
+                "id": "org.apache.logging.log4j:log4j-core:2.11.2",
+                "name": "Minecraft Forge (log4j-core)",
+                "type": "Library",
+                "artifact": {
+                  "size": 1629585,
+                  "MD5": "c8bd8b5c5aaaa07a3dcbf57de01c9266",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/apache/logging/log4j/log4j-core/2.11.2/log4j-core-2.11.2.jar"
+                }
+              },
+              {
+                "id": "net.minecrell:terminalconsoleappender:1.2.0",
+                "name": "Minecraft Forge (terminalconsoleappender)",
+                "type": "Library",
+                "artifact": {
+                  "size": 15977,
+                  "MD5": "679363fa893293791e55a21f81342f87",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/minecrell/terminalconsoleappender/1.2.0/terminalconsoleappender-1.2.0.jar"
+                }
+              },
+              {
+                "id": "net.sf.jopt-simple:jopt-simple:5.0.4",
+                "name": "Minecraft Forge (jopt-simple)",
+                "type": "Library",
+                "artifact": {
+                  "size": 78146,
+                  "MD5": "eb0d9dffe9b0eddead68fe678be76c49",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar"
+                }
+              },
+              {
+                "id": "org.spongepowered:mixin:0.8",
+                "name": "Minecraft Forge (mixin)",
+                "type": "Library",
+                "artifact": {
+                  "size": 931239,
+                  "MD5": "7775c515b7dacbe7c63ecbcfd2e7a051",
+                  "url": "https://storage.googleapis.com/lectron-launcher/repo/lib/org/spongepowered/mixin/0.8/mixin-0.8.jar"
+                }
+              }
+            ]
+          },
+          {
+            "id": "com.mamiyaotaru.voxelmap.forgemod:voxelmap:1.10.10@jar",
+            "name": "VoxelMap",
+            "type": "ForgeMod",
+            "artifact": {
+              "size": 828675,
+              "MD5": "b2edea3008fb26c81e079a5646c7ff35",
+              "url": "https://storage.googleapis.com/lectron-launcher/servers/AvalonConcordia-1.16.2/forgemods/optionalon/forgemod_VoxelMap-1.10.10_for_1.16.2%20(1).jar"
+            },
+            "required": {
+              "value": false
+            }
+          },
+          {
+            "id": "preview_OptiFine_1.16.2_HD_U_G3_pre6.jar",
+            "name": "preview_OptiFine_1.16.2_HD_U_G3_pre6.jar",
+            "type": "File",
+            "artifact": {
+              "size": 5783237,
+              "MD5": "12f1d68e3283391cee6d54071ebd234b",
+              "url": "https://storage.googleapis.com/lectron-launcher/servers/AvalonConcordia-1.16.2/files/mods/preview_OptiFine_1.16.2_HD_U_G3_pre6.jar",
+              "path": "mods/preview_OptiFine_1.16.2_HD_U_G3_pre6.jar"
+            }
+          },
+          {
+            "id": "Dramatic+Sky+for+1.14+.zip",
+            "name": "Dramatic+Sky+for+1.14+.zip",
+            "type": "File",
+            "artifact": {
+              "size": 8900866,
+              "MD5": "a76bccc16a10bd1c3493648182e6687a",
+              "url": "https://storage.googleapis.com/lectron-launcher/servers/AvalonConcordia-1.16.2/files/resourcepacks/Dramatic+Sky+for+1.14+.zip",
+              "path": "resourcepacks/Dramatic+Sky+for+1.14+.zip"
+            }
+          },
+          {
+            "id": "servers.dat",
+            "name": "servers.dat",
+            "type": "File",
+            "artifact": {
+              "size": 12787,
+              "MD5": "608a3328dcb9c4e74f493c0a50377379",
+              "url": "https://storage.googleapis.com/lectron-launcher/servers/AvalonConcordia-1.16.2/files/servers.dat",
+              "path": "servers.dat"
+            }
+          }
+        ]
+      }
+    ]
+  }
