@@ -1,7 +1,7 @@
 {
-  "name": "lectronlauncher",
+  "name": "lectron",
   "version": "1.0.1",
-  "productName": "Lectron Launcher",
+  "productName": "Lectron",
   "description": "Modded Minecraft Launcher",
   "author": "Jay aka ASCIIcat (https://github.com/ASCIIcat/)",
   "license": "MIT",
