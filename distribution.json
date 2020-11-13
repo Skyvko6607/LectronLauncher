@@ -8,7 +8,7 @@
   },
   "servers": [
     {
-      "id": "Lectron-1.16.2",
+      "id": "Lectron 1.16.2",
       "name": "Lectron (Minecraft 1.16.2)",
       "description": "Lectron Running Minecraft 1.16.2",
       "icon": "https://i.imgur.com/fqXpr3E.png",
@@ -369,7 +369,7 @@
       ]
     },
     {
-      "id": "Lectron-1.13.2",
+      "id": "Lectron 1.13.2",
       "name": "Lectron 1.13.2",
       "description": "This is our 1.13 version for the server.",
       "version": "1.0.0",
